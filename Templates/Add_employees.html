@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office Employee Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    {% include 'index.html'%}
+    <hr>
+    <div class="container">
+     
+        <h1>Add an Employee</h1>
+        <hr>
+        <form action="/add_emp" method="POST">
+            {% csrf_token %}
+            
+            <label for="first_name" >NAME</label><br>
+            <input type="text"  name="name" required>
+            <hr>
+            <label for="last_name" >POSITION</label><br>
+            <input type="text"  name="position" required>
+            <hr>
+            <label for="last_name" >DEPARTMENT</label><br>
+            <input type="text"  name="department" required>
+            <hr>
+         
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
